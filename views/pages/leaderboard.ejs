@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица лидеров</title>
+    <link rel="stylesheet" href="/style1.css">
+</head>
+<body>
+    <section class="firstBlockLeaderboard">
+        <div class="welcome">
+            <h1>leaderboard <br><span><%= login %></span></h1>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/games">Игры</a></li>
+                <li><a href="/leaderboard">Таблица лидеров</a></li>
+                <li id="logout"><a href="/logout" >Выйти</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="leaderboard">
+        <button id ="prevGame">&#129152;</button>
+        <div class="tableGame" style="display: block;">
+            <h1>Tetris</h1>
+            <% for (let i = 0; i < tetrisLeaderboard.length; i++) { %>
+                <ul>
+                    <li>
+                        <span class="number"><%= i + 1 %></span>
+                        <span class="name"><%= tetrisLeaderboard[i].username %></span>
+                        <span class="points"><%= tetrisLeaderboard[i].score %> pts</span>
+                    </li>
+                </ul>
+            <% } %>
+        </div>
+        <div class="tableGame" style="display: none;">
+            <h1>Pacman</h1>
+            <% for (let i = 0; i < pacmanLeaderboard.length; i++) { %>
+                <ul>
+                    <li>
+                        <span class="number"><%= i + 1 %></span>
+                        <span class="name"><%= pacmanLeaderboard[i].username %></span>
+                        <span class="points"><%= pacmanLeaderboard[i].time %> сек.</span>
+                    </li>
+                </ul>
+            <% } %>
+        </div>
+        <div class="tableGame" style="display: none;">
+            <h1>Breakeout</h1>
+            <% for (let i = 0; i < breakoutLeaderboard.length; i++) { %>
+                <ul>
+                    <li>
+                        <span class="number"><%= i + 1 %></span>
+                        <span class="name"><%= breakoutLeaderboard[i].username %></span>
+                        <span class="points"><%= breakoutLeaderboard[i].brkScore %> pts</span>
+                    </li>
+                </ul>
+            <% } %>
+        </div>
+        <div class="tableGame" style="display: none;">
+            <h1>Space invaders</h1>
+            <% for (let i = 0; i < spcInvLeaderboard.length; i++) { %>
+                <ul>
+                    <li>
+                        <span class="number"><%= i + 1 %></span>
+                        <span class="name"><%= spcInvLeaderboard[i].username %></span>
+                        <span class="points"><%= spcInvLeaderboard[i].timeSpcInv %> сек.</span>
+                    </li>
+                </ul>
+            <% } %>
+        </div>
+        <button id="nextGame" style="margin-left: 40px;">&#129154;</button>
+    </div>
+    <script src="/leaderboard.js"></script>
+</body>
+</html>

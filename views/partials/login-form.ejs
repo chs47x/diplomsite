@@ -1,0 +1,18 @@
+<form method="POST" action="/login" id="login-form" style="display: none;">
+    <h1>Вход</h1>
+    <div>
+        <input type="text" id="login_username" name="login_username" placeholder="Имя" required>
+    </div>
+
+    <div>
+        <input type="password" id="login_password" name="login_password" placeholder="Пароль" required>
+    </div>
+
+    <div>
+        <button type="submit" id = "submit-reg">Войти</button>
+    </div>
+
+    <p style="color: #fff;">Нет учетной записи?</p>
+    <p class="chngBtn" onclick="changheWindow()">Зарегистрироваться</p>
+    <p id="errorLogin">неверный логин или пароль</p>
+</form>

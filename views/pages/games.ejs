@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Игры</title>
+</head>
+<body>
+    <section class="firstBlock">
+        <div class="welcome">
+            <h1>WELCOME <br><span><%= login %></span></h1>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/games">Игры</a></li>
+                <li><a href="/leaderboard">Таблица лидеров</a></li>
+                <li id="logout"><a href="/logout" >Выйти</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="secondBlock">
+        <h1>GAMES</h1>
+        <div class="games">
+            <div class="left-side">
+                <div class="gameL visible">
+                    <div id="pacman"><a href="/games/pacman"></a><span>PACMAN</span></div>
+                </div>
+                <div class="gameL visible">
+                    <div id="tetris"><a href="/games/tetris"></a><span>TETRIS</span></div>
+                </div>
+            </div>
+            <div class="right-side">
+               <div class="gameR visible">
+                    <div id="breakout"><a href="/games/breakout"></a><span>BREAKOUT</span></div>
+               </div>
+               <div class="gameR visible">
+                <div id="spaceinvaders"><a href="/games/spaceinvaders"></a><span>SPACE INVADERS</span></div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <script src="game-animation.js"></script>
+</body>
+</html>

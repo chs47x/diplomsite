@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=VT323&display=swap');
+@font-face {
+  font-family: 'MyBitmapFont';
+  src: url('/fonts/slkscr.ttf') format('truetype');
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+.firstBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  background-image: url(/background.gif);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: Cover;
+}
+
+.firstBlock::before{
+  position: absolute;
+  content: '';
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+.welcome {
+  z-index: 1;
+  text-align: center;
+}
+.welcome h1{
+  font-family: 'MyBitmapFont', sans-serif;
+  margin: 0;
+  font-size: 80px;
+  color: #ffffff;
+}
+.welcome h1 span{
+  font-family: 'VT323', monospace;
+  color: #ffffff;
+  font-size: 50px;
+}
+.firstBlock div ul{
+  list-style: none;
+  margin-top: 50px;
+  padding: 0;
+}
+.firstBlock div ul li:not(:last-child)::after {
+  content: " | ";
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.firstBlock div ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+.firstBlock div ul li:last-child{
+  margin-right: 0;
+}
+.firstBlock div ul li a{
+  text-decoration: none;
+  color: #f0a211;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.firstBlock a:hover{
+  font-size: 18px;
+  color: #cf3202;
+}
+.secondBlock{
+  background-image: url(/background22.png);
+  font-family: 'VT323', monospace;
+  height: 800px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: Cover;
+}
+.games{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.secondBlock h1{
+  font-size: 50px;
+}
+
+.left-side{
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 200px;
+
+}
+.right-side{
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: flex-start;
+  margin-left: 200px;
+}
+.gameR{
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1s ease;
+}
+.gameL{
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1s ease;
+}
+#pacman{
+  background-image: url(/pacmanLogo1.png);
+  background-repeat: no-repeat;
+  background-size: Cover;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 150px;
+}
+#pacman a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#tetris{
+  background-image: url(/tetrisLogo.png);
+  background-repeat: no-repeat;
+  background-size: Cover;
+  height: 150px;
+  width: 150px;
+}
+#tetris a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#breakout {
+  background-image: url(/breakoutLogo.png);
+  background-repeat: no-repeat;
+  background-size: Cover;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 150px;
+}
+#breakout a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#spaceinvaders{
+  background-image: url(spaceInv-assets/enemy1.png);
+  background-repeat: no-repeat;
+  background-size: Cover;
+  height: 150px;
+  width: 150px;
+}
+#spaceinvaders a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.visible{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.firstBlockLeaderboard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  background-image: url(/background2.gif);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: Cover;
+}
+
+.firstBlockLeaderboard::before{
+  position: absolute;
+  content: '';
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+.firstBlockLeaderboard div ul{
+  list-style: none;
+  margin-top: 50px;
+  padding: 0;
+}
+.firstBlockLeaderboard div ul li:not(:last-child)::after {
+  content: " | ";
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+.firstBlockLeaderboard div ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+.firstBlockLeaderboard div ul li:last-child{
+  margin-right: 0;
+}
+.firstBlockLeaderboard div ul li a{
+  text-decoration: none;
+  color: #f0a211;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.firstBlockLeaderboard a:hover{
+  font-size: 18px;
+  color: #cf3202;
+}
+
+.leaderboard{
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(/backgroundImg0.svg);
+  background-repeat: no-repeat;
+  background-size: Cover;
+  
+}
+.leaderboard h1{
+  font-family: 'VT323', monospace;
+  font-size: 35px;
+}
+.leaderboard ul{
+  width: 450px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.leaderboard ul li{
+  display: flex;
+  background: rgba(255, 166, 0, 0.87);
+  padding:10px 20px;
+  color: #000000;
+  margin:  5px 0;
+  transition: .5s;
+}
+.leaderboard ul li span:nth-child(1){
+  width: 30px;
+
+}
+.leaderboard ul li span:nth-child(2){
+  width: 200px;
+
+}
+.leaderboard ul li span:nth-child(3){
+  padding-left: 90px;
+  width: 60px;
+  text-align: right;
+}
+.leaderboard ul li:hover{
+  transform:scale(1.06);
+}
+#prevGame{
+  height: 60px;
+  width: 40px;
+  border: none;
+  background-color: #cd07ff;
+  cursor: pointer;
+  margin-top: 70px;
+  border-radius: 10px;
+}
+#nextGame{
+  height: 60px;
+  width: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #cd07ff;
+  cursor: pointer;
+  margin-top: 70px;
+}
+#prevGame:hover{
+  background-color: #d852fa;
+}
+#nextGame:hover{
+  background-color: #d852fa;
+}

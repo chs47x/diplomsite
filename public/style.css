@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=VT323&display=swap');
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+    background-color: #202020;
+}
+.nav_menu{
+    background-color: #f0a211;
+    display: flex;
+    justify-content: space-around;
+}
+ .nav_menu ul{
+    margin:  0;
+}
+#logo span{
+    color: #FFF;
+    font-size: 30px;
+    font-family: 'VT323', monospace;
+    transition: 0.8s;
+}
+#logo li{
+    padding: 25px 0px 0px 0px;
+}
+#fstUl{
+    margin: 0 auto;
+}
+#fstUl li a {
+    line-height: 76px;
+    padding: 30px;
+}
+  
+#sndUl{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+#sndUl li{
+    padding: 25px;
+}
+.nav_menu ul li {
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+}
+#fstUl li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #0752bb;
+    transition: height 0.3s;
+  }
+#fstUl li:hover::after {
+    height: 6px;
+  }
+.nav_menu ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+#logout{
+    font-size: 15px;
+}
+
+#login{
+    color: #FFF;
+    font-size: 20px;
+}
+.mainDiv{
+    height: calc(100vh - 76px);
+    display: flex;
+    flex-direction: column;
+}
+.pacman{
+    position: relative;
+    color: #FFf;
+    flex: 1;
+    background-image: url(/pacman.png);
+    background-size: contain;
+    overflow: hidden;
+    border-bottom: 2px solid #b47a0e;
+}
+.pacman::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* left: 100%; */
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
+    transition: left 0.5s;
+
+}
+.pacman:hover::before{
+    left: 0;
+}
+#play{
+    padding: 25px;
+    color: #fff;
+    background-color: #0752bb;
+    border-radius: 5px;
+    width: 150px;
+    text-decoration: none;
+}
+.tetris{
+    position: relative;
+    color: #FFf;
+    background-image: url(/tetris.png);
+    background-size: contain;
+    flex: 1;
+    overflow: hidden;
+    border-bottom: 2px solid #b47a0e;
+}
+.tetris::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
+    transition: left 0.5s;
+}
+.tetris:hover::before{
+    left: 0;
+}
+.breakout{
+    position: relative;
+    color: #FFf;
+    background-image: url(/breakout.png);
+    background-size: contain;
+    flex: 1;
+    overflow: hidden;
+    border-bottom: 2px solid #b47a0e;
+}
+.breakout::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
+    transition: left 0.5s;
+}
+.breakout:hover::before{
+    left: 0;
+}
+.spaceinvaders{
+    position: relative;
+    color: #FFf;
+    background-image: url(/space-invaders.png);
+    background-size: contain;
+    flex: 1;
+    overflow: hidden;
+    border-bottom: 2px solid #b47a0e;
+}
+.spaceinvaders::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
+    transition: left 0.5s;
+}
+.spaceinvaders:hover::before{
+    left: 0;
+}
+.sus{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 100%;
+    color:#FFF;
+    text-decoration: none;
+}
+.main-games {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #171717;
+    border-radius: 10px;
+  }
+  
+  /* Изображение */
+  .main-games img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Заголовок */
+  .main-games h2.games-text {
+    font-size: 28px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Текст */
+  .main-games p.games-text {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
+  /* Кнопка "Играть" */
+  .main-games a#play {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #dd950f;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .main-games a#play:hover {
+    background-color: #b47a0e;
+  }
+.main{
+    height: calc(100vh - 76px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-leaderboard{
+    height: calc(100vh - 76px);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.leaderboard{
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.num{
+    background-color: #dd950f;
+}
+.table-content{
+    background-color: #b47a0e;
+    transition: 0.5s;
+}
+.table-content:hover{
+    transform: scale(1.1);
+}
+.main p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.chngBtn{
+    color: #dd950f;
+    cursor: pointer;
+}
+.chngBtn:hover{
+    color: #b47a0e;
+}
+#reg-form{
+    box-shadow: 0px 6px 50px #ffa60067;
+    border-radius: 20px;
+    max-width: 415px;
+    width: 100%;
+    padding: 38px 30px 38px 30px ;
+    background-color: #171717;
+}
+
+#login-form{
+    box-shadow: 0px 6px 50px #ffa60067;
+    border-radius: 20px;
+    max-width: 415px;
+    width: 100%;
+    padding: 38px 30px 38px 30px ;
+    background-color: #171717;
+}
+#errorReg{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+#errorLogin{
+    color: red;
+    font-size: 12px;
+    display: none;  
+}
+#reg-form h1{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 38px;
+    
+}
+#login-form h1{
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 38px;
+}
+
+input{
+    background-color: #1f1f1f;
+    color: #fff;
+    height: 45px;
+    width: 94.9%;
+    font-size: 13px;
+    line-height: 16px;
+    border:  none;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    padding-left: 15px;
+}
+#submit-reg{
+    display: block;
+    height: 35px;
+    background-color: #f0a211;
+    border-radius: 5px;
+    color: #FFF;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#submit-reg:hover{
+    background-color: #b47a0e;
+}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=VT323&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    background-image: url(/background.png);
+    background-repeat: no-repeat;
+    background-size: Cover;
+}
+.arcade{
+    position: relative;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 76px);
+}
+.img1{
+    z-index: -1;
+    margin-top: 5%;
+    height: 1000px;
+    position: absolute;
+}
+.img2{
+    height: 995px;
+    margin-top: 5%;
+    position: absolute;
+    z-index: 2;
+}
+.img3{
+    height: 995px;
+    margin-top: 5%;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.5;
+}
+#game{
+
+  z-index: 1;
+}
+.nav_menu{
+    background-color: #f0a211;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+ .nav_menu ul{
+    margin:  0;
+}
+#logo span{
+    color: #FFF;
+    font-size: 30px;
+    font-family: 'VT323', monospace;
+    transition: 0.8s;
+}
+#logo li{
+    padding: 25px 0px 0px 0px;
+}
+#fstUl{
+    margin: 0 auto;
+}
+#fstUl li a {
+    line-height: 76px;
+    padding: 30px;
+}
+  
+#sndUl{
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+#sndUl li{
+    padding: 25px;
+}
+.nav_menu ul li {
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+}
+#fstUl li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #0752bb;
+    transition: height 0.3s;
+  }
+#fstUl li:hover::after {
+    height: 6px;
+  }
+.nav_menu ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+#logout{
+    font-size: 15px;
+}
+
+#login{
+    color: #FFF;
+    font-size: 20px;
+}

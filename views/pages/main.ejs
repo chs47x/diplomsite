@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style-main.css">
+</head>
+<body>
+    <section class="firstBlock">
+        <div>
+            <span>ARCADE GAMES</span>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/games">Игры</a></li>
+                <li><a href="/leaderboard">Таблица лидеров</a></li>
+                <li><a href="#feedback">Обратная связь</a></li>
+                <li><a href="#about">О сайте</a></li>
+            </ul>
+            <a href="/games" id="playBtn">ИГРАТЬ</a>
+        </div>
+    </section>
+    <section class="secondBlock" id="about">
+        <div>
+            <H1>Что такое ARCADE GAMES?</H1>
+            <div class="about visible">
+                <p>
+                Arcade Games - это сайт, посвященный классическим аркадным играм, которые 
+                пользовались большой популярностью в 80-х и 90-х годах. На сайте вы найдете
+                множество игр, включая Pac-Man, Space Invaders, Tetris и многие другие. Вы сможете 
+                вспомнить золотые дни аркадных игр и провести время с увлекательными и
+                захватывающими играми. Мы постоянно добавляем новые игры, так что вы всегда
+                сможете найти что-то новое для себя. Подключитесь к Arcade Games и отправьтесь в 
+                увлекательное путешествие в мир классических аркадных игр! <br>
+                </p>
+                <a href="/games">ИГРАТЬ</a>
+            </div>
+        </div>
+    </section>
+    <section class="thirdBlock">
+        <h1>какие игры есть на сайте</h1>
+        <div id="main-container">
+            <div class="container visible ">
+                <h4>PacMan</h4>
+            <p>
+                Аркадная видеоигра, разработанная японской компанией Namco и вышедшая в 1980 году. 
+                Задача игрока — управляя Пакманом, съесть все точки в лабиринте, избегая встречи с привидениями, которые гоняются за героем
+            </p>
+            </div>
+            <div class="container visible ">
+                <h4>Breakout</h4>
+                <p>
+                    Аркадная игра, похожая на Pong, созданная фирмой Atari в 1976 году. 
+                    В 1978 году последовало продолжение — Super Breakout. 
+                    Является наиболее известным представителем игр жанра «Арканоид».
+                </p>
+            </div>
+            <div class="container visible ">
+                <h4>Tetris</h4>
+                <p>
+                    «Тетрис» представляет собой головоломку, 
+                    построенную на использовании геометрических фигур «тетрамино» — разновидности полимино. 
+                    Полимино в том или ином виде использовались в настольных играх  до создания «Тетриса»
+                </p>
+            </div>
+            <div class="container visible ">
+                <h4>Space Invaders</h4>
+                <p>
+                    видеоигра, разработанная и выпущенная в 1978 году на аркадных автоматах.
+                    Несмотря на свою простоту, она является основоположницей современных игр и помогла игровой индустрии превратиться в одну из крупнейших в мире.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="feedback" id="feedback">
+        <div><img src="/img.jpg" alt="" srcset=""></div>
+        <form method="post" action="/send" id="feedback-form">
+            <h1>Обратная связь</h1>
+            <label for="subject">Тема:</label><br>
+            <input type="text" id="subject" name="subject" required><br>
+            <label for="message">Описание:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <button type="submit" id = "submit">Отправить</button>
+        </form>   
+    </section>
+    <script src="feedback.js"></script>
+</body>
+</html>
