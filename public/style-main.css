@@ -64,7 +64,7 @@ html{
     font-weight: bold;
     transition: 0.5s;
 }
-.firstBlock a:hover{
+.firstBlock li a:hover{
     font-size: 18px;
     color: #cf3202;
 }
@@ -200,6 +200,9 @@ html{
     padding: 20px;
     width: 450px;
 }
+label{
+    margin-bottom: 10px;
+}
 input{
     height: 45px;
     width: 100%;
@@ -207,8 +210,10 @@ input{
     border-radius: 10px;
     padding-left: 10px;
     margin-bottom: 10px;
+    outline: none;
 }
 #message{
+    outline: none;
     width: 100%;
     padding-left: 10px;
     padding-top: 10px;
@@ -229,6 +234,13 @@ input{
     margin: auto;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
+    transition: .3s;
+}
+#submit:active{
+    transform: scale(0.96);
+}
+#submit:hover{
+    background-color: #c0000a;
 }
 .feedback div{
     height: 750px;

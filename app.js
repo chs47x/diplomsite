@@ -44,18 +44,16 @@ app.get('/registration',(req, res) => {
 });
 
 app.post('/registration',upload.none(), (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  const email = req.body.email;
+  const {username, password, email} = req.body;
 
   connection.query('SELECT * FROM users WHERE username = ?', [username], (err, results) => {
     if (err) {
       console.error(err);
-      res.send(500);
+      res.sendStatus(500);
       return;
     }
     if (results.length > 0) {
-      res.send(500);
+      res.sendStatus(500);
       return;
     }
     connection.query('INSERT INTO users (username, password, email) VALUES (?, ?, ?)', [username, password, email], (err, results) => {
@@ -68,7 +66,7 @@ app.post('/registration',upload.none(), (req, res) => {
         password
       };
       req.session.login = username;
-      res.send(200);
+      res.sendStatus(200);
     });
   });
 });
@@ -86,9 +84,9 @@ app.post('/login',upload.none(), (req, res) => {
 					password
 				};
 				req.session.login = results[0].username;
-        res.send(200);
+        res.sendStatus(200);
 			} else {
-				res.send(500);
+				res.sendStatus(500);
 			}
 			res.end();
 		});
@@ -215,10 +213,10 @@ app.post('/send',upload.none(), (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
-      res.status(500).json({ success: false, message: 'Ошибка отправки сообщения' });
+      res.sendStatus(500).json({ success: false, message: 'Ошибка отправки сообщения' });
     } else {
       console.log('Сообщение отправлено: ' + info.response);
-      res.status(200).json({ success: true, message: 'Сообщение успешно отправлено' });
+      res.sendStatus(200).json({ success: true, message: 'Сообщение успешно отправлено' });
     }
   });
 });

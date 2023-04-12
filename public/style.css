@@ -71,120 +71,7 @@ body, html{
     color: #FFF;
     font-size: 20px;
 }
-.mainDiv{
-    height: calc(100vh - 76px);
-    display: flex;
-    flex-direction: column;
-}
-.pacman{
-    position: relative;
-    color: #FFf;
-    flex: 1;
-    background-image: url(/pacman.png);
-    background-size: contain;
-    overflow: hidden;
-    border-bottom: 2px solid #b47a0e;
-}
-.pacman::before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    /* left: 100%; */
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
-    transition: left 0.5s;
 
-}
-.pacman:hover::before{
-    left: 0;
-}
-#play{
-    padding: 25px;
-    color: #fff;
-    background-color: #0752bb;
-    border-radius: 5px;
-    width: 150px;
-    text-decoration: none;
-}
-.tetris{
-    position: relative;
-    color: #FFf;
-    background-image: url(/tetris.png);
-    background-size: contain;
-    flex: 1;
-    overflow: hidden;
-    border-bottom: 2px solid #b47a0e;
-}
-.tetris::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
-    transition: left 0.5s;
-}
-.tetris:hover::before{
-    left: 0;
-}
-.breakout{
-    position: relative;
-    color: #FFf;
-    background-image: url(/breakout.png);
-    background-size: contain;
-    flex: 1;
-    overflow: hidden;
-    border-bottom: 2px solid #b47a0e;
-}
-.breakout::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
-    transition: left 0.5s;
-}
-.breakout:hover::before{
-    left: 0;
-}
-.spaceinvaders{
-    position: relative;
-    color: #FFf;
-    background-image: url(/space-invaders.png);
-    background-size: contain;
-    flex: 1;
-    overflow: hidden;
-    border-bottom: 2px solid #b47a0e;
-}
-.spaceinvaders::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(to right, #e6a1236e 50%,rgba(158, 41, 41, 0) 50%,rgba(0, 0, 0, 0) 100%);
-    transition: left 0.5s;
-}
-.spaceinvaders:hover::before{
-    left: 0;
-}
-.sus{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    padding: 100%;
-    color:#FFF;
-    text-decoration: none;
-}
 .main-games {
     max-width: 800px;
     margin: 0 auto;
@@ -239,36 +126,10 @@ body, html{
     align-items: center;
     text-align: center;
 }
-.main-leaderboard{
-    height: calc(100vh - 76px);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.leaderboard{
-    padding: 20px;
-    font-size: 17px;
-    font-weight: bold;
-}
-.num{
-    background-color: #dd950f;
-}
-.table-content{
-    background-color: #b47a0e;
-    transition: 0.5s;
-}
-.table-content:hover{
-    transform: scale(1.1);
-}
-.main p{
-    font-size: 14px;
-    margin-top: 10px;
-}
 .chngBtn{
     color: #dd950f;
     cursor: pointer;
+    width: 100%;
 }
 .chngBtn:hover{
     color: #b47a0e;
@@ -281,7 +142,22 @@ body, html{
     padding: 38px 30px 38px 30px ;
     background-color: #171717;
 }
-
+#reg-form a{
+    text-decoration: none;
+    color: #ff00ff;
+    transition: .5s;
+}
+#reg-form a:hover{
+    color: #880688;
+}
+#login-form a{
+    text-decoration: none;
+    color: #ff00ff;
+    transition: .5s;
+}
+#login-form a:hover{
+    color: #880688;
+}
 #login-form{
     box-shadow: 0px 6px 50px #ffa60067;
     border-radius: 20px;
@@ -319,6 +195,7 @@ body, html{
 input{
     background-color: #1f1f1f;
     color: #fff;
+    outline: none;
     height: 45px;
     width: 94.9%;
     font-size: 13px;
